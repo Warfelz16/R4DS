@@ -10,7 +10,7 @@ library(tidyverse)
 
 The structure of the cells in a honeycomb have been proposed to serve as a way of controling parasitic infestations by the mite *Varoa destructor* which can have serious affects on honeybee larvae.  In a paper by Maggi et al. 2010, honeycomb cells of worker broods were examined to determine whether cell size related to prevelance of the mites.  Here we will model the presence or absence of parasies as a function of cell size.
 ```{r}
-Bee <- read_csv(file = "~/Dropbox/Teaching/R for Data Science/GLMGLMM_AllData/workerbees.csv")
+Bee <- read_csv(file = "/Users/zacharywarfel/Documents/GitHub/R4DS/workerbees.csv")
 str(Bee)
 ```
 To illustrate a GLM on binary data we will convert these data (number of parasites) into a binary data set of presence absence data.
@@ -117,7 +117,7 @@ Validating a binomial GLM can be difficult becuase the response variable is simp
 Sticking with the same theme as the Bee parasite data above, we will work with another data set in which 4 comercially available acaricideson the Varoa mites.  115 groups of 4 mites were exposed to a pesticides and the number of dead mites were counted after 24 hours.  The data consists of these mortality data, as well as categorical data on the type of pesticide and continuous data on the concentration used.  Lets load the data!
 
 ```{r}
-mite <- read_csv(file = "~/Dropbox/Teaching/R for Data Science/GLMGLMM_AllData/DrugsMites.csv")
+mite <- read_csv(file = "/Users/zacharywarfel/Documents/GitHub/R4DS/DrugsMites.csv")
 str(mite)
 ```
 Using the PDF of the binomial distribution we can calcualte the probability that Y= 0 (i..e dead) in a group of N=4 for a given probablity $\pi$. For example if $\pi=0.4$ and $N=4$, the $Pr(Y=0)$ is
